@@ -24,7 +24,7 @@ modules:
   - type: script
     dest-filename: apply_extra
     commands:
-    - tar xvf X-AIR-Edit_LINUX_X64_V1.5.tar.gz
+    - tar xvf X-AIR-Edit_LINUX_1.5.tar.gz
   - type: file
     path: com.behringer.XAirEdit.desktop
   - type: file
@@ -32,9 +32,9 @@ modules:
   - type: file
     path: com.behringer.XAirEdit.png
   - type: extra-data
-    filename: X-AIR-Edit_LINUX_X64_V1.5.tar.gz
+    filename: X-AIR-Edit_LINUX_1.5.tar.gz
     only-arches:
     - x86_64
-    url: https://mediadl.musictribe.com/download/software/behringer/XAIR/X-AIR-Edit_LINUX_X64_V1.5.tar.gz
+    url: https://mediadl.musictribe.com/download/software/behringer/XAIR/X-AIR-Edit_LINUX_1.5.tar.gz
     sha256: 3733b829ed07319f786add8654619e70bc9e7bbcad41b6d11bf6cd93e5ffe3c5
     size: 6878502
