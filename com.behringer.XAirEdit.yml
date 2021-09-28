@@ -11,6 +11,11 @@ finish-args:
 - --share=network
 - --device=dri
 modules:
+- name: patchelf
+  sources:
+  - type: git
+    url: https://github.com/NixOS/patchelf.git
+    commit: a949ff23315bbb5863627c4655fe216ecbf341a2
 - name: x-air-edit
   buildsystem: simple
   build-commands:
@@ -24,7 +29,8 @@ modules:
   - type: script
     dest-filename: apply_extra
     commands:
-    - tar -zxv --no-same-owner -f X-AIR-Edit_LINUX_1.5.tar.gz
+    - tar -zxv --no-same-owner -f X-AIR-Edit_LINUX_1.7.tar.gz
+    - patchelf --replace-needed libcurl-gnutls.so.4 libcurl.so.4 X-AIR-Edit
   - type: file
     path: com.behringer.XAirEdit.desktop
   - type: file
@@ -32,9 +38,9 @@ modules:
   - type: file
     path: com.behringer.XAirEdit.png
   - type: extra-data
-    filename: X-AIR-Edit_LINUX_1.5.tar.gz
+    filename: X-AIR-Edit_LINUX_1.7.tar.gz
     only-arches:
     - x86_64
-    url: https://mediadl.musictribe.com/download/software/behringer/XAIR/X-AIR-Edit_LINUX_1.5.tar.gz
-    sha256: 3733b829ed07319f786add8654619e70bc9e7bbcad41b6d11bf6cd93e5ffe3c5
-    size: 6878502
+    url: https://mediadl.musictribe.com/download/software/behringer/XAIR/X-AIR-Edit_LINUX_1.7.tar.gz
+    sha256: 72e638ed9b534be760174db1e59fd7e1852d3759b65cd6045db877b3b3e616b3
+    size: 7408538

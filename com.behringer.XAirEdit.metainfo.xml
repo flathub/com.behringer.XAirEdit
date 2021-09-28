@@ -21,6 +21,18 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-04-28"version="1.7">
+      <description>
+        <ul>
+          <li>Preventing sleep on MAC (no App Nap)</li>
+          <li>Improved touch interface for all platforms</li>
+          <li>New GUI preferences 'Confirm Pop-Ups'</li>
+          <li>New preferences for Auto Connect and Auto Synchronize</li>
+          <li>Sync-Direction is saved as preference</li>
+          <li>Command line interface on startup with options</li>
+        </ul>
+      </description>
+    </release>
     <release date="2017-01-30" version="1.5"/>
   </releases>
   <content_rating type="oars-1.1" />
