@@ -24,7 +24,7 @@ modules:
   - type: script
     dest-filename: apply_extra
     commands:
-    - tar xvf X-AIR-Edit_LINUX_1.5.tar.gz
+    - tar -zxv --no-same-owner -f X-AIR-Edit_LINUX_1.5.tar.gz
   - type: file
     path: com.behringer.XAirEdit.desktop
   - type: file
