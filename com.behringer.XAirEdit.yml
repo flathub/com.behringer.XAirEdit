@@ -30,7 +30,7 @@ modules:
   - type: script
     dest-filename: apply_extra
     commands:
-    - tar -zxv --no-same-owner -f X-AIR-Edit_LINUX_1.8.tar.gz
+    - tar -zxv --no-same-owner -f X-AIR-Edit_LINUX.tar.gz
     - patchelf --replace-needed libcurl-gnutls.so.4 libcurl.so.4 X-AIR-Edit
   - type: file
     path: com.behringer.XAirEdit.desktop
@@ -39,9 +39,15 @@ modules:
   - type: file
     path: com.behringer.XAirEdit.png
   - type: extra-data
-    filename: X-AIR-Edit_LINUX_1.8.tar.gz
+    filename: X-AIR-Edit_LINUX.tar.gz
     only-arches:
     - x86_64
     url: https://mediadl.musictribe.com/download/software/behringer/XAIR/X-AIR-Edit_LINUX_1.8.tar.gz
     sha256: 1b04d96d30999ab880ca0766b820dcc5e5ecb05a56b23e0beb2368fce150187d
     size: 8462220
+    x-checker-data:
+      type: json
+      url: https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=P0BI8
+      version-query: .[] | select(.title=="Software") | .list[] | select(.title | contains("X-AIR Edit (Linux)")).title | sub("^X-AIR Edit \\(Linux\\) Version ";"")
+      url-query: .[] | select(.title == "Software") | .list[] | select(.title == "X-AIR Edit (Linux) Version " + $version).url
+      is-main-source: true
