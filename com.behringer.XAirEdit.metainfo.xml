@@ -21,7 +21,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release date="2021-04-28"version="1.7">
+    <release date="2021-04-28" version="1.7">
       <description>
         <ul>
           <li>Preventing sleep on MAC (no App Nap)</li>
