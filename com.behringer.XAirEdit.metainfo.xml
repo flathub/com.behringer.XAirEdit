@@ -21,7 +21,22 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release date="2021-04-28"version="1.7">
+    <release version="1.8" date="2023-06-21">
+      <description>
+        <ul>
+          <li>Added support for V2 mixers with alternative MCU, FPGA, USB, WIFI module: XR18V2, X18V2</li>
+          <li>Added support for mixers with alternative WIFI module: XR12W, XR16W</li>
+          <li>Improved load/save 'working directory' directory handling on all OS</li>
+          <li>Improved RTA Source handling, fixed Solo Priority</li>
+          <li>Improved EQ graph display with eq numbers and frequency lines</li>
+          <li>Fixed multiple connect popup issue</li>
+          <li>Fixed panning feedback on linked channels during sync from pc to mixer</li>
+          <li>Fixed Stereo De-esser m/s process sync</li>
+          <li>Fixes for touch interface glitches</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2021-04-28" version="1.7">
       <description>
         <ul>
           <li>Preventing sleep on MAC (no App Nap)</li>
@@ -35,5 +50,5 @@
     </release>
     <release date="2017-01-30" version="1.5"/>
   </releases>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
 </component>
