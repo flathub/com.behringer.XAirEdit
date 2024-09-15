@@ -16,11 +16,19 @@
     </p>
   </description>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
+      <caption>X Air Edit Mixer View</caption>
       <image>https://raw.githubusercontent.com/flathub/com.behringer.XAirEdit/master/screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.8.1" date="2024-04-09">
+      <description>
+        <ul>
+          <li>Fixed connection issue for HW models: XR18V2, X18V2, XR12W, XR16W</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.8" date="2023-06-21">
       <description>
         <ul>
