@@ -10,7 +10,7 @@ finish-args:
 - --socket=x11
 - --share=network
 - --device=dri
-- --filesystem=home
+- --persist=.config/.X-AIR-Edit
 modules:
 - name: patchelf
   sources:
