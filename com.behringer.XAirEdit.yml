@@ -1,50 +1,50 @@
 app-id: com.behringer.XAirEdit
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: X-AIR-Edit
 tags:
-- proprietary
+  - proprietary
 finish-args:
-- --share=ipc
-- --socket=x11
-- --share=network
-- --device=dri
-- --filesystem=home
+  - --share=ipc
+  - --socket=x11
+  - --share=network
+  - --device=dri
+  - --filesystem=home
 modules:
-- name: patchelf
-  sources:
-  - type: git
-    url: https://github.com/NixOS/patchelf.git
-    commit: a949ff23315bbb5863627c4655fe216ecbf341a2
-- name: x-air-edit
-  buildsystem: simple
-  build-commands:
-  - install -d /app/bin /app/extra
-  - install apply_extra /app/bin
-  - ln -s /app/extra/X-AIR-Edit /app/bin/X-AIR-Edit
-  - install -Dm644 -t /app/share/applications com.behringer.XAirEdit.desktop
-  - install -Dm644 -t /app/share/metainfo com.behringer.XAirEdit.metainfo.xml
-  - install -Dm644 -t /app/share/icons/hicolor/512x512/apps com.behringer.XAirEdit.png
-  sources:
-  - type: script
-    dest-filename: apply_extra
-    commands:
-    - tar -zxv --no-same-owner -f X-AIR-Edit_LINUX.tar.gz
-    - patchelf --replace-needed libcurl-gnutls.so.4 libcurl.so.4 X-AIR-Edit
-  - type: file
-    path: com.behringer.XAirEdit.desktop
-  - type: file
-    path: com.behringer.XAirEdit.metainfo.xml
-  - type: file
-    path: com.behringer.XAirEdit.png
-  - type: extra-data
-    filename: X-AIR-Edit_LINUX.tar.gz
-    only-arches:
-    - x86_64
-    url: https://mediadl.musictribe.com/download/software/behringer/XAIR/1.8.1/X-AIR-Edit_LINUX_1.8.1.tar.gz
-    sha256: bc5cb7fe202c1acd48941498017e734e085b3ed05f14252da951717ccb050866
-    size: 7934368
+  - name: patchelf
+    sources:
+      - type: git
+        url: https://github.com/NixOS/patchelf.git
+        commit: a949ff23315bbb5863627c4655fe216ecbf341a2
+  - name: x-air-edit
+    buildsystem: simple
+    build-commands:
+      - install -d /app/bin /app/extra
+      - install apply_extra /app/bin
+      - ln -s /app/extra/X-AIR-Edit /app/bin/X-AIR-Edit
+      - install -Dm644 -t /app/share/applications com.behringer.XAirEdit.desktop
+      - install -Dm644 -t /app/share/metainfo com.behringer.XAirEdit.metainfo.xml
+      - install -Dm644 -t /app/share/icons/hicolor/512x512/apps com.behringer.XAirEdit.png
+    sources:
+      - type: script
+        dest-filename: apply_extra
+        commands:
+          - tar -zxv --no-same-owner -f X-AIR-Edit_LINUX.tar.gz
+          - patchelf --replace-needed libcurl-gnutls.so.4 libcurl.so.4 X-AIR-Edit
+      - type: file
+        path: com.behringer.XAirEdit.desktop
+      - type: file
+        path: com.behringer.XAirEdit.metainfo.xml
+      - type: file
+        path: com.behringer.XAirEdit.png
+      - type: extra-data
+        filename: X-AIR-Edit_LINUX.tar.gz
+        only-arches:
+          - x86_64
+        url: https://mediadl.musictribe.com/download/software/behringer/XAIR/1.8.1/X-AIR-Edit_LINUX_1.8.1.tar.gz
+        sha256: fe0058b8c76bd16f0d4c71e132af76d6329c664f091868a54036f38b2b9d0adf
+        size: 16795
     # Behringer has changed their REST API, so disable this for now.
     #x-checker-data:
     #  type: json
