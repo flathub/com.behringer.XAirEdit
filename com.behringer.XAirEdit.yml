@@ -45,10 +45,10 @@ modules:
         url: https://cdn.mediavalet.com/aunsw/musictribe/VX4UkGFjQ0a1DH2Q8zg3sg/_KJ6tGIG7kGVqPxP-OsnLQ/Original/X-AIR-Edit_LINUX_1.8.1.tar.gz
         sha256: bc5cb7fe202c1acd48941498017e734e085b3ed05f14252da951717ccb050866
         size: 7934368
-    # Behringer has changed their REST API, so disable this for now.
-    #x-checker-data:
-    #  type: json
-    #  url: https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=P0BI8
-    #  version-query: .[] | select(.title=="Software") | .list[] | select(.title | contains("X-AIR Edit (Linux)")).title | sub("^X-AIR Edit \\(Linux\\) Version ";"")
-    #  url-query: .[] | select(.title == "Software") | .list[] | select(.title == "X-AIR Edit (Linux) Version " + $version).url
-    #  is-main-source: true
+        # Behringer has changed their REST API, so disable this for now.
+        #x-checker-data:
+        #  type: json
+        #  url: https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=P0BI8
+        #  version-query: .[] | select(.title=="Software") | .list[] | select(.title | contains("X-AIR Edit (Linux)")).title | sub("^X-AIR Edit \\(Linux\\) Version ";"")
+        #  url-query: .[] | select(.title == "Software") | .list[] | select(.title == "X-AIR Edit (Linux) Version " + $version).url
+        #  is-main-source: true
