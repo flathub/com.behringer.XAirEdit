@@ -43,8 +43,8 @@ modules:
         only-arches:
           - x86_64
         url: https://cdn.mediavalet.com/aunsw/musictribe/VX4UkGFjQ0a1DH2Q8zg3sg/_KJ6tGIG7kGVqPxP-OsnLQ/Original/X-AIR-Edit_LINUX_1.8.1.tar.gz
-        sha256: bc5cb7fe202c1acd48941498017e734e085b3ed05f14252da951717ccb050866
-        size: 7934368
+        sha256: e14e3ba41283f83b2dfd7c8bf25c928794d20098c233b40661089150368c1322
+        size: 2644790
         # Behringer has changed their REST API, so disable this for now.
         #x-checker-data:
         #  type: json
