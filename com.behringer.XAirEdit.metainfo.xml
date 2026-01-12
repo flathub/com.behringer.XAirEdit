@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.behringer.XAirEdit</id>
   <provides><id>com.behringer.XAirEdit.desktop</id></provides>
   <launchable type="desktop-id">com.behringer.XAirEdit.desktop</launchable>
@@ -10,6 +10,7 @@
   <project_license>LicenseRef-proprietary=https://www.behringer.com/product.html?modelCode=P0BI8</project_license>
   <url type="homepage">https://www.behringer.com/product.html?modelCode=P0BI8</url>
   <description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Behringer.**</p>
     <p>X Air Edit is the companion application the Behringer XR mixers.
     It gives full control on mixing and effect processing as
     well as provides live metering data.
